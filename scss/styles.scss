@@ -11,15 +11,14 @@ body {
   background-repeat: no-repeat;
 }
 .main {
-  display: grid;
-  grid-template-rows: 30% 1fr 1fr 25%;
+  display: flex;
+  flex-direction: column;
 }
 .main__box {
   width: 326px;
   height: 200px;
   border-radius: 10px 100px 10px 10px;
-  margin: auto;
-  grid-row-start: 2;
+  margin: 7em 5% 0 3%;
   background-color: $DarkBlue;
 }
 .main__logo {
@@ -48,8 +47,7 @@ body {
   border-radius: 10px;
   width: 326px;
   height: 160px;
-  margin: 15px auto;
-  grid-row-start: 3;
+  margin: 1.2em 5% 0 3%;
   background-color: #1d2c67;
   color: white;
   text-align: center;
@@ -64,11 +62,9 @@ body {
   height: 15px;
   border: 3px solid $VeryDarkBlue;
   background: $VeryDarkBlue;
-  /* background-size: 262px; */
   position: relative;
   margin-top: 20px;
   border-radius: 25px;
-  /* display: table-row; */
   align-self: center;
   &--fill {
     background: linear-gradient(
@@ -95,10 +91,6 @@ body {
   display: flex;
   margin: -22px 8%;
   justify-content: space-between;
-  &--start {
-  }
-  &--end {
-  }
 }
 .storage__leftSpace {
   width: 180px;
@@ -109,7 +101,7 @@ body {
   color: $VeryDarkBlue;
   top: 2em;
   position: relative;
-  left: 4em;
+  left: 5em;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -122,14 +114,97 @@ body {
   }
 }
 
-/*You’ve used 815 GB of your storage 185 GB Left 0 GB 1000 GB
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-        Frontend Mentor
-      </a>
-      . Coded by
-      <a href="#">Your Name Here</a>
-      .
-    </div>*/
+@media (min-width: 600px) {
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    background-image: url('/images/bg-desktop.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 32em;
+    background-color: $VeryDarkBlue;
+  }
+  .main {
+    display: flex;
+    flex-direction: row;
+  }
+  .main__box {
+    width: 326px;
+    height: 200px;
+    border-radius: 10px 100px 10px 10px;
+    margin: 25em 0 0 32em;
+    background-color: $DarkBlue;
+  }
+  .storage {
+    border-radius: 10px;
+    width: 720px;
+    height: 160px;
+    margin: 390px 5% 0 1.5%;
+    background-color: #1d2c67;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    & span {
+      text-align: left;
+      margin-top: 32px;
+      margin-left: 60px;
+    }
+    &__bottom--start {
+      margin-left: -57px;
+    }
+  }
+  .storage__bar {
+    width: 82%;
+    height: 15px;
+    border: 3px solid $VeryDarkBlue;
+    background: $VeryDarkBlue;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 25px;
+    align-self: center;
+    &--fill {
+      background: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+      );
+      width: 81.5%;
+      height: 100%;
+      border-radius: 25px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    &--indicator {
+      height: 11px;
+      width: 11px;
+      border-radius: 50%;
+      background-color: white;
+      margin-right: 2px;
+    }
+  }
+  .storage__leftSpace {
+    width: 180px;
+    height: 70px;
+    border-radius: 15px;
+    background-color: white;
+    position: absolute;
+    color: #0c122c;
+    top: -10em;
+    position: relative;
+    left: 35em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .storage__leftSpace:after {
+    content: '';
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 40px 0px 0 30px;
+    position: absolute;
+    top: 54px;
+    left: 150px;
+  }
+}
