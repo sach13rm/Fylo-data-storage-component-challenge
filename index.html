@@ -19,33 +19,64 @@
 
     <title>Frontend Mentor | Fylo data storage component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
     </style>
   </head>
   <body>
     <section class="main">
       <div class="main__box1">
         <img class="main__logo" src="images/logo.svg" alt="logo" />
-        <div>
-          <img
-            class="main__icon"
-            src="images/icon-document.svg"
-            alt="document"
-          />
+        <div class="main__icon--container">
+          <div class="main__icon">
+            <img
+              class="main__icon--document"
+              src="images/icon-document.svg"
+              alt="document"
+            />
+          </div>
+          <div class="main__icon">
+            <img
+              class="main__icon--folder"
+              src="images/icon-folder.svg"
+              alt="folder"
+            />
+          </div>
+          <div class="main__icon">
+            <img
+              class="main__icon--upload"
+              src="images/icon-upload.svg"
+              alt="upload"
+            />
+          </div>
         </div>
-        <img class="main__icon" src="images/icon-folder.svg" alt="folder" />
-        <img class="main__icon" src="images/icon-upload.svg" alt="upload" />
       </div>
 
-      <div class="main__box2"></div>
+      <div class="main__box2">
+        <span>
+          You've used <strong>815 GB</strong> of your storage
+        </span>
+        <div class="storage__bar">
+          <div class="storage__bar--fill">
+            <div class="storage__bar--indicator">
+              
+            </div>
+          </div>          
+        </div>
+        <div class="storage__bottom">
+          <span class="storage__bottom--start">
+            <strong>
+              0 GB
+            </strong>
+          </span>
+          <span class="storage__bottom--end">
+            <strong>
+              1000 GB
+            </strong>
+          </span>
+        </div>
+        <div class="storage__leftSpace">
+          <strong>185</strong> <small> GB LEFT</small>
+        </div>
+      </div>
     </section>
   </body>
 </html>

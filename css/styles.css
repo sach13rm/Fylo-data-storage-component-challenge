@@ -8,11 +8,11 @@ body {
 
 .main {
   display: grid;
-  grid-template-rows: 35% 1fr 1fr 25%;
+  grid-template-rows: 30% 1fr 1fr 25%;
 }
 
 .main__box1 {
-  width: 360px;
+  width: 326px;
   height: 200px;
   border-radius: 10px 100px 10px 10px;
   margin: auto;
@@ -21,16 +21,99 @@ body {
 }
 
 .main__logo {
-  padding: 3em;
+  padding: 42px;
+}
+
+.main__icon--container {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  margin-left: 26px;
+}
+
+.main__icon {
+  background-color: #0c122c;
+  border: 12px solid #0c122c;
+  border-radius: 10px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+  margin-top: -15px;
 }
 
 .main__box2 {
   border-radius: 10px;
-  width: 360px;
-  height: 150px;
+  width: 326px;
+  height: 160px;
   margin: 15px auto;
   grid-row-start: 3;
   background-color: #1d2c67;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.main__box2 span {
+  margin-top: 32px;
+}
+
+.storage__bar {
+  width: 262px;
+  height: 15px;
+  border: 3px solid #0c122c;
+  background: #0c122c;
+  /* background-size: 262px; */
+  position: relative;
+  margin-top: 20px;
+  border-radius: 25px;
+  /* display: table-row; */
+  align-self: center;
+}
+.storage__bar--fill {
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  width: 81.5%;
+  height: 100%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.storage__bar--indicator {
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 2px;
+}
+
+.storage__bottom {
+  display: flex;
+  margin: -22px 8%;
+  justify-content: space-between;
+}
+.storage__leftSpace {
+  width: 180px;
+  height: 70px;
+  border-radius: 15px;
+  background-color: white;
+  position: absolute;
+  color: #0c122c;
+  top: 2em;
+  position: relative;
+  left: 4em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.storage__leftSpace strong {
+  font-size: 2.5em;
+}
+.storage__leftSpace small {
+  color: #848794;
+  font-weight: bold;
 }
 
 /*You’ve used 815 GB of your storage 185 GB Left 0 GB 1000 GB
