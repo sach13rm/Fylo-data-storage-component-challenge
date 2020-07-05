@@ -5,6 +5,7 @@ $VeryDarkBlue: hsl(229, 57%, 11%);
 
 body {
   font-family: 'Raleway', sans-serif;
+  font-size: 14px;
   background-image: url('/images/bg-mobile.png');
   background-size: 100%;
   background-repeat: no-repeat;
@@ -13,7 +14,7 @@ body {
   display: grid;
   grid-template-rows: 30% 1fr 1fr 25%;
 }
-.main__box1 {
+.main__box {
   width: 326px;
   height: 200px;
   border-radius: 10px 100px 10px 10px;
@@ -43,7 +44,7 @@ body {
   margin-top: -15px;
 }
 
-.main__box2 {
+.storage {
   border-radius: 10px;
   width: 326px;
   height: 160px;
